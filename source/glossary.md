@@ -1,3 +1,4 @@
+(glossary)=
 # Glossary
 
 - **FastPort**: This is the *horrendous* connector that is used on Sony Ericsson phones
