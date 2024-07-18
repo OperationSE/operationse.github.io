@@ -15,7 +15,7 @@ author = 'Operation SE Team'
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
 
-html_theme = 'groundwork'
+html_theme = 'sphinx_book_theme'
 extensions = ['myst_parser']
 templates_path = ['_templates']
 exclude_patterns = []
@@ -24,4 +24,8 @@ exclude_patterns = []
 
 # -- Options for HTML output -------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
-html_static_path = ['_static']
+html_static_path = ['static']
+
+
+# -- MyST Extensions ---------------------------------------------------------
+myst_enable_extensions = ['html_image']
