@@ -15,12 +15,7 @@ jobs:
     # Standard drop-in approach that should work for most people.
     - uses: ammaraskar/sphinx-action@master
       with:
-        docs-folder: "docs/"
-    # Example of using a custom build-command.
-    - uses: ammaraskar/sphinx-action@master
-      with:
-        build-command: "sphinx-build -b html . _build"
-        docs-folder: "docs2/"
+        docs-folder: "source/"
     
     # Publish built docs to gh-pages branch.
     # ===============================
