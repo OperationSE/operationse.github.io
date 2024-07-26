@@ -4,6 +4,8 @@ on:
   push:
     branches: [main] # branch to trigger deployment
 
+permissions: write-all
+
 jobs:
   pages:
     runs-on: ubuntu-20.04
