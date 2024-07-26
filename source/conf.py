@@ -16,7 +16,7 @@ author = 'Operation SE Team'
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
 
 html_theme = 'sphinx_book_theme'
-extensions = ['myst_parser']
+extensions = ['myst_parser', 'sphinx.ext.githubpages']
 templates_path = ['_templates']
 exclude_patterns = []
 
