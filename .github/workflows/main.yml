@@ -18,7 +18,6 @@ jobs:
       - name: Make conda environment
         uses: conda-incubator/setup-miniconda@v2
         with:
-          dir-docs: source
           python-version: 3.10    # Python version to build the html sphinx documentation
           environment-file: devtools/conda-envs/docs_env.yaml    # Path to the documentation conda environment
           auto-update-conda: false
@@ -32,7 +31,7 @@ jobs:
         uses: uibcdf/action-sphinx-docs-to-gh-pages@v2.1.0
         with:
           branch: main
-          dir_docs: docs
+          dir_docs: source
           sphinx-apidoc-opts: '--separate -o . ../'
           sphinx-apidoc-exclude: '../*setup* ../*.ipynb'
           sphinx-opts: ''
