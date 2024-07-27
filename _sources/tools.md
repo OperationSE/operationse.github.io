@@ -17,7 +17,7 @@ A2Uploader is a tool that fills the same purpose as XS++ but it's meant for A2-b
 [A2Uploader](files/tools/a2uploader.exe)
 
 ## FAR Manager
-This is a modular file manager made by [Eugene Roshal](https://fr.wikipedia.org/wiki/Eugene_Roshal). It is quite modular and this specific one comes with plugins to break A1 phones and navigate through the phone's internal filesystem that's otherwise inaccessible.
+This is a modular file manager made by [Eugene Roshal](https://fr.wikipedia.org/wiki/Eugene_Roshal). It is quite modular and this specific one comes with plugins to break A1 phones and navigate through the phone's internal filesystem that's otherwise inaccessible. For A2 phones, different tools are included to patch their firmware.
 
 Here are the links for it:
 - [Far Manager A1](files/tools/FARManager.7z)

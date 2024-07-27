@@ -314,6 +314,7 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a2uploader">A2uploader</a></li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#patching">Patching</a></li>
 </ul>
             </nav>
         </div>
@@ -327,7 +328,7 @@ document.write(`
                   
   <section id="a2-based-phones">
 <h1>A2-based phones<a class="headerlink" href="#a2-based-phones" title="Link to this heading">#</a></h1>
-<p>⚠️WARNING⚠️: You must first have a phone with BROWN certificates, otherwise you won’t be able to mod your A2-based phone. You can do this with a tool such as <a class="reference external" href="https://www.kaijousuru.com/">Omnius for SE</a> (Feel free to join the Discord to ask for an Omnius account)</p>
+<p>⚠️WARNING⚠️: You must first have a phone with BROWN certificates, otherwise you won’t be able to mod your A2-based phone. You can do this with a tool such as <a class="reference external" href="https://www.kaijousuru.com/">Omnius for SE</a> (Feel free to join the Discord to ask for an Omnius account).</p>
 <section id="flashing">
 <h2>Flashing<a class="headerlink" href="#flashing" title="Link to this heading">#</a></h2>
 <section id="a2uploader">
@@ -339,8 +340,31 @@ document.write(`
 <li><p>Add your customization pack (as a <code class="docutils literal notranslate"><span class="pre">.zip</span></code>)</p></li>
 <li><p>Press flash</p></li>
 </ol>
-<p>It should ask you to remove the battery, insert it back after 5 seconds and then inserting the USB cable while holding C. Once detected, the flashing process starts. When done, unplug the USB cable, remove the battery, insert it back after 5 seconds, start the phone and it should boot on the firmware you just flashed after a few progress bars.</p>
+<p>It should ask yo to remove the battery, insert it back after 5 seconds and then inserting the USB cable while holding C. Once detected, the flashing process starts. When done, unplug the USB cable, remove the battery, insert it back after 5 seconds, start the phone and it should boot on the freshly flashed firmware after a few progress bars.</p>
 </section>
+</section>
+<section id="patching">
+<h2>Patching<a class="headerlink" href="#patching" title="Link to this heading">#</a></h2>
+<p>On A2-based phones, patching is done differently compared to A1 phones. It requires to extract the firmware’s executables, also known as <code class="docutils literal notranslate"><span class="pre">.cxc</span></code> files (this is why BROWN certificates are needed) and patching them accordingly using FARcxcpatcher before copying them back on the phone.</p>
+<p>First, open FAR Manager, open the plugin dialog by pressing F11 and select the SEFP2 plugin, once done, press “Connect”
+<img alt="SEFP2 Dialog" src="_images/A2_SEFP2_1.png" /></p>
+<p>Once done, remove the battery, insert it back in after 5 seconds and plug the USB cable while holding C.
+Wait a few seconds and this screen should appear, it lists all elements of the phone’s internal filesystem.
+<img alt="SEFP2 Folders" src="_images/A2_SEFP2_2.png" /></p>
+<p>Now on the opposite pane, select a folder where you wanna copy the <code class="docutils literal notranslate"><span class="pre">boot</span></code> folder to, and press F5 on the SEFP2 pane to copy all of the boot folder to your computer
+<img alt="SEFP2 Copy" src="_images/A2_SEFP2_3.png" /></p>
+<p>Once copied, leave SEFP2, unplug the phone for now and open the folder where your patches are located.
+<img alt="CXCPatcher Step 1" src="_images/A2_CXCPATCHER_1.png" /></p>
+<p>Now, select the file to patch (it should be written inside the VKP patch as such):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">;</span><span class="n">pAtChFiLe</span><span class="o">=/</span><span class="n">boot</span><span class="o">/</span><span class="n">phone_app</span><span class="o">.</span><span class="n">cxc</span>
+</pre></div>
+</div>
+<p>It should be opened in FARcxcpatcher
+<img alt="CXCPatcher Step 2" src="_images/A2_CXCPATCHER_2.png" /></p>
+<p>Now select a patch in the opposite pane, and copy it by pressing F5, the patch should now appear inside the <code class="docutils literal notranslate"><span class="pre">.cxc</span></code> file
+<img alt="CXCPatcher Step 3" src="_images/A2_CXCPATCHER_3.png" /></p>
+<p>Leave CXCPatcher (using the three dots at the top) to apply patches to the executable.</p>
+<p>Open SEFP2, plug the phone in recovery mode, copy the patched files to the <code class="docutils literal notranslate"><span class="pre">boot/</span></code> folder and reboot the phone, it should be patched.</p>
 </section>
 </section>
 
@@ -384,6 +408,7 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a2uploader">A2uploader</a></li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#patching">Patching</a></li>
 </ul>
   </nav></div>
 

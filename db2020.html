@@ -316,6 +316,7 @@ document.write(`
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#breaking">Breaking</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#patching">Patching</a></li>
 </ul>
             </nav>
         </div>
@@ -372,8 +373,20 @@ Once that’s done, FAR Manager should look like this</p>
 <p><img alt="justdaflaser babe img" src="_images/farman_jdf6.png" /></p>
 <p>It should take a while to flash the image, wait for it to finish and let’s proceed to flashing the qamaker patch (<code class="docutils literal notranslate"><span class="pre">.vkp</span></code>)
 Same thing, locate your qamaker patch, highlight it and copy it with F5. But this time, the box that should be ticked is <code class="docutils literal notranslate"><span class="pre">as</span> <span class="pre">a</span> <span class="pre">vkp</span> <span class="pre">patch</span></code>.</p>
-<p>Once it’s done you can just leave FAR Manager and reboot your phone by removing its battery, putting it back in and powering it on.</p>
+<p>Once it’s done you can just leave FAR Manager and reboot the phone by removing its battery, putting it back in and powering it on.</p>
 <p>You now have a breaked DB2020 phone. If you want to access the breaked mode using justdaflasher to flash new plugins, you totally can now that you have the quick access patch, you just need to select the <code class="docutils literal notranslate"><span class="pre">qa2020</span></code> script instead of <code class="docutils literal notranslate"><span class="pre">db2020</span></code> and you should be brought back in a state where you can flash vkp patches</p>
+</section>
+<section id="patching">
+<h2>Patching<a class="headerlink" href="#patching" title="Link to this heading">#</a></h2>
+<p>To patch your phone, you need to break it beforehand, once that’s done and everything works, launch FAR Manager, open JDF, and select <code class="docutils literal notranslate"><span class="pre">qa2020</span></code> as the script now that QuickAccess has been flashed.</p>
+<p><img alt="justdaflaser qa2020" src="_images/farman_jdf7.png" /></p>
+<p>Once that’s done, press “jump down into a large rabbit hole”, remove the battery, put it back in after 5 seconds and plug in your phone while holding C.</p>
+<p>When JDF is done loading, this screen should appear
+<img alt="justdaflaser qa2020" src="_images/farman_jdf8.png" /></p>
+<p>Select <code class="docutils literal notranslate"><span class="pre">bflash</span></code>, and then this familiar screen should re-appear
+<img alt="justdaflaser qa2020" src="_images/farman_jdf9.png" /></p>
+<p>Now flashing patches is possible, as done before by selecting them in the other pane, copying them by pressing F5, selecting “Copy” and then selecting <code class="docutils literal notranslate"><span class="pre">as</span> <span class="pre">a</span> <span class="pre">vkp</span> <span class="pre">patch</span></code>.
+<img alt="justdaflaser qa2020" src="_images/farman_jdf10.png" /></p>
 </section>
 </section>
 
@@ -427,6 +440,7 @@ Same thing, locate your qamaker patch, highlight it and copy it with F5. But thi
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#breaking">Breaking</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#patching">Patching</a></li>
 </ul>
   </nav></div>
 
