@@ -22,4 +22,4 @@ Now that the patches are flashed, follow this procedure :
 - If you have any dynamic library, copy it in the **"DLL"** folder.
 
 Daemons are ELF executables that launch at startup.
-Depending on whether your phone has external storage or not *(e.g. W980)*, a **"Daemons"** folder should be created along the  **"Config"** and **"DLL"** folders, otherwise, this folder must be on the external storage (with this path `PHONE CARD/Other/ZBin/Daemons`)
+Depending on whether your phone has external storage or not *(e.g. W980)*, a **"Daemons"** folder should be created alongside the  **"Config"** and **"DLL"** folders, otherwise, this folder must be on the external storage (with this path `PHONE CARD/Other/ZBin/Daemons`)
