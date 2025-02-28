@@ -8,6 +8,7 @@
 - **FBN**: This is the second part of the firmware, it sets up the internal file system and contains files that are used by the main firmware, pre-installed Java apps and more
 - **Custpack or Customization files**: These files (that are stored in the filesystem) can be modified by phone carriers to customize the operating system.
 - **Breaking**: This is the action of enabling firmware patching on your phone
-- **Patches or VKP**: These are files that contain information to change bytes in the firmware to patch it.
-- **Elfpack**: This is a set of files and patches that enable ELF executables to be run on phones
-- **Quick Access**: This is a patch that lets you boot in a "patch flashing" mode
+- **Patches or VKP**: These are files that contain information to change bytes in the firmware to patch it, VKP is their extension.
+- **ElfPack**: This is a set of files and patches that enable ELF executables to be run on phones
+- **Quick Access**: This is a patch that lets you boot in a "patch flashing" mode for DB2020 phones
+- **Browning**: This is the action to change a phone's certificates to developper mode, commonly known as BROWN.
