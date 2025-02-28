@@ -15,8 +15,8 @@ Finally, you'll need to take one of these `Patcher.jar` that matches your phone'
 - [U10_R7AA071](/_static/jjpatcher_jar/U10_R7AA071/Patcher.jar)
 - [U10_R7BA084](/_static/jjpatcher_jar/U10_R7BA084/Patcher.jar)
 - [U100_R7AA076](/_static/jjpatcher_jar/U100_R7AA076/Patcher.jar)
-- [W705_R1GA031](/_static/jjpatcher_jar/W705_R7GA031/Patcher.jar)
-- [W20_R7DA062](/_static/jjpatcher_jar/W705_R7DA062/Patcher.jar)
+- [W705_R1GA031](/_static/jjpatcher_jar/W705_R1GA031/Patcher.jar)
+- [W20_R7DA062](/_static/jjpatcher_jar/W20_R7DA062/Patcher.jar)
 - [W995_R1HA035](/_static/jjpatcher_jar/W995_R1HA035/Patcher.jar)
 
 ## Installation
