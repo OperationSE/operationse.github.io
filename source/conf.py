@@ -9,7 +9,7 @@
 import os
 
 project = 'Operation SE'
-copyright = '2024, Operation SE Team'
+copyright = '2025, Operation SE Team'
 author = 'Operation SE Team'
 
 # -- General configuration ---------------------------------------------------
@@ -19,8 +19,11 @@ html_theme = 'sphinx_book_theme'
 extensions = ['myst_parser', 'sphinx.ext.githubpages']
 templates_path = ['_templates']
 exclude_patterns = []
-
-
+html_theme_options = {
+  "show_navbar_depth": 4,
+  "max_navbar_depth": 4,
+  "collapse_navbar": True,
+}
 
 # -- Options for HTML output -------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
