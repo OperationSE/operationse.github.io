@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>CID &lt;= 53 &#8212; Operation SE  documentation</title>
+    <title>CID &gt; 53… JJPatcher &#8212; Operation SE  documentation</title>
   
   
   
@@ -40,11 +40,11 @@
     <script src="../../_static/doctools.js?v=9a2dae69"></script>
     <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'a2/patching/a2_upto_cid53';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'a2/patching/a2_cid_higher_53';</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="CID &gt; 53… JJPatcher" href="a2_cid_higher_53.html" />
-    <link rel="prev" title="Patching" href="index.html" />
+    <link rel="next" title="Elfpacks" href="../../elfpack.html" />
+    <link rel="prev" title="CID &lt;= 53" href="a2_upto_cid53.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -164,8 +164,8 @@
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="../index.html">A2-based phones</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../flashing/index.html">Flashing</a></li>
 <li class="toctree-l2 current active has-children"><a class="reference internal" href="index.html">Patching</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
-<li class="toctree-l3 current active"><a class="current reference internal" href="#">CID &lt;= 53</a></li>
-<li class="toctree-l3"><a class="reference internal" href="a2_cid_higher_53.html">CID &gt; 53… JJPatcher</a></li>
+<li class="toctree-l3"><a class="reference internal" href="a2_upto_cid53.html">CID &lt;= 53</a></li>
+<li class="toctree-l3 current active"><a class="current reference internal" href="#">CID &gt; 53… JJPatcher</a></li>
 </ul>
 </details></li>
 </ul>
@@ -228,7 +228,7 @@
       
       
       
-      <li><a href="../../_sources/a2/patching/a2_upto_cid53.md" target="_blank"
+      <li><a href="../../_sources/a2/patching/a2_cid_higher_53.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -299,7 +299,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
 </div></div>
       
     </div>
@@ -310,11 +312,20 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>CID <= 53</h1>
+    <h1>CID > 53… JJPatcher</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#prerequisites">Prerequisites</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#installation">Installation</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -324,29 +335,43 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section id="cid-53">
-<h1>CID &lt;= 53<a class="headerlink" href="#cid-53" title="Link to this heading">#</a></h1>
-<p>⚠️WARNING⚠️: You must first have a phone with BROWN certificates, otherwise you won’t be able to mod your A2-based phone. You can do this with a tool such as <a class="reference external" href="https://www.kaijousuru.com/">Omnius for SE</a> (Feel free to join the Discord to ask for an Omnius account).</p>
-<p>On A2-based phones, patching is done differently compared to A1 phones. It requires to extract the firmware’s executables, also known as <code class="docutils literal notranslate"><span class="pre">.cxc</span></code> files (this is why BROWN certificates are needed) and patching them accordingly using FARcxcpatcher before copying them back on the phone.</p>
-<p>First, open FAR Manager, open the plugin dialog by pressing F11 and select the SEFP2 plugin, once done, press “Connect”
-<img alt="SEFP2 Dialog" src="../../_images/A2_SEFP2_1.png" /></p>
-<p>Once done, remove the battery, insert it back in after 5 seconds and plug the USB cable while holding C.
-Wait a few seconds and this screen should appear, it lists all elements of the phone’s internal filesystem.
-<img alt="SEFP2 Folders" src="../../_images/A2_SEFP2_2.png" /></p>
-<p>Now on the opposite pane, select a folder where you wanna copy the <code class="docutils literal notranslate"><span class="pre">boot</span></code> folder to, and press F5 on the SEFP2 pane to copy all of the boot folder to your computer
-<img alt="SEFP2 Copy" src="../../_images/A2_SEFP2_3.png" /></p>
-<p>Once copied, leave SEFP2, unplug the phone for now and open the folder where your patches are located.
-<img alt="CXCPatcher Step 1" src="../../_images/A2_CXCPATCHER_1.png" /></p>
-<p>Now, select the file to patch (it should be written inside the VKP patch as such):</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">;</span><span class="n">pAtChFiLe</span><span class="o">=/</span><span class="n">boot</span><span class="o">/</span><span class="n">phone_app</span><span class="o">.</span><span class="n">cxc</span>
-</pre></div>
-</div>
-<p>It should be opened in FARcxcpatcher
-<img alt="CXCPatcher Step 2" src="../../_images/A2_CXCPATCHER_2.png" /></p>
-<p>Now select a patch in the opposite pane, and copy it by pressing F5, the patch should now appear inside the <code class="docutils literal notranslate"><span class="pre">.cxc</span></code> file
-<img alt="CXCPatcher Step 3" src="../../_images/A2_CXCPATCHER_3.png" /></p>
-<p>Leave CXCPatcher (using the three dots at the top) to apply patches to the executable.</p>
-<p>Open SEFP2, plug the phone in recovery mode, copy the patched files to the <code class="docutils literal notranslate"><span class="pre">boot/</span></code> folder and reboot the phone, it should be patched.</p>
+  <section id="cid-53-jjpatcher">
+<h1>CID &gt; 53… JJPatcher<a class="headerlink" href="#cid-53-jjpatcher" title="Link to this heading">#</a></h1>
+<p>When your CID is higher than 53 you’ll need to use what’s called JJPatcher, it’s a Java-based patcher that leverages an exploit to patch the phone at runtime. It is a bit tedious to set up but works great once installed.</p>
+<section id="prerequisites">
+<h2>Prerequisites<a class="headerlink" href="#prerequisites" title="Link to this heading">#</a></h2>
+<p>First and foremost, you need <strong>bpatch</strong>, you can find the Git repo for it here: <a class="reference external" href="https://github.com/farid1991/bpatch">farid1991/bpatch</a>, either clone the repository or download it as a ZIP directly from GitHub.</p>
+<p>You’ll also need FAR Manager with SEFP2.</p>
+<p>Finally, you’ll need to take one of these <code class="docutils literal notranslate"><span class="pre">Patcher.jar</span></code> that matches your phone’s firmware, if it doesn’t, flash the corresponding firmware.</p>
+<ul class="simple">
+<li><p><a class="reference download internal" download="" href="../../_downloads/75e415b21372bd2dbbf0dc6c10ab4140/Patcher.jar"><span class="xref download myst">J10_R7CA061</span></a></p></li>
+<li><p><a class="reference download internal" download="" href="../../_downloads/aff3a6689b54ad59dc4090404fdb05ee/Patcher.jar"><span class="xref download myst">J10_R7CA065</span></a></p></li>
+<li><p><a class="reference download internal" download="" href="../../_downloads/0035baa3e1fb3201ab4db02d82591645/Patcher.jar"><span class="xref download myst">J20_R7CA064</span></a></p></li>
+<li><p><a class="reference download internal" download="" href="../../_downloads/1ede96ac63bccc9befcdd8afd8bb6e9e/Patcher.jar"><span class="xref download myst">J108_R7EA011</span></a></p></li>
+<li><p><a class="reference download internal" download="" href="../../_downloads/07d8094760477177ee75eafe786337b8/Patcher.jar"><span class="xref download myst">U10_R7AA071</span></a></p></li>
+<li><p><a class="reference download internal" download="" href="../../_downloads/677b88f23b97a942cb9cb65c48e2ac9f/Patcher.jar"><span class="xref download myst">U10_R7BA084</span></a></p></li>
+<li><p><a class="reference download internal" download="" href="../../_downloads/6e5b32303eada4d88b478d28a8450645/Patcher.jar"><span class="xref download myst">U100_R7AA076</span></a></p></li>
+<li><p><a class="reference internal" href="#/_static/jjpatcher_jar/W705_R7GA031/Patcher.jar"><span class="xref myst">W705_R1GA031</span></a></p></li>
+<li><p><a class="reference internal" href="#/_static/jjpatcher_jar/W705_R7DA062/Patcher.jar"><span class="xref myst">W20_R7DA062</span></a></p></li>
+<li><p><a class="reference download internal" download="" href="../../_downloads/c9c85f8504721c41bbfa3f7f7227570a/Patcher.jar"><span class="xref download myst">W995_R1HA035</span></a></p></li>
+</ul>
+</section>
+<section id="installation">
+<h2>Installation<a class="headerlink" href="#installation" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>Copy the corresponding <code class="docutils literal notranslate"><span class="pre">Patcher.jar</span></code> file on your device and install it as an application.</p></li>
+<li><p>Once done, go to your Applications menu and copy it to internal storage. It won’t work otherwise.</p></li>
+<li><p>Now, remove your battery and prepare SEFP2 on your computer (Open FAR, press F11, select SEFP2 and press “Continue”).</p></li>
+<li><p>Put your battery back in and connect your phone to the computer while holding <strong>C</strong>.</p></li>
+<li><p>Copy <code class="docutils literal notranslate"><span class="pre">script/customize_upgrade.xml</span></code> from the bpatch folder to <code class="docutils literal notranslate"><span class="pre">/tpa/preset/custom</span></code> on your phone.</p></li>
+<li><p>Disconnect from SEFP2, remove your battery, plug it back in and start the phone.</p></li>
+<li><p>Once done, go to the File Manager and you should see a file called <code class="docutils literal notranslate"><span class="pre">jab3b4ded00cb34b3cc77a6699f87ac10753fa701.b</span></code> in the <strong>Others</strong> folder, copy it to your memory card to get it out from the phone to bpatch’s folder</p></li>
+<li><p>Once out, run <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">bpatch.py</span> <span class="pre">jab3b4ded00cb34b3cc77a6699f87ac10753fa701.b</span></code> to patch the bytecode.</p></li>
+<li><p>Shut down your phone again, start SEFP2 and plug your phone back while holding <strong>C</strong></p></li>
+<li><p>Copy the patched <code class="docutils literal notranslate"><span class="pre">jab3b4ded00cb34b3cc77a6699f87ac10753fa701.b</span></code> file to <code class="docutils literal notranslate"><span class="pre">/tpa/preset/system/ams</span></code></p></li>
+<li><p>Unplug the phone, remove the battery, put it back in and start the phone. JJPatcher should work just fine and will patch your system with any <code class="docutils literal notranslate"><span class="pre">.vkp</span></code> patch that’s in <code class="docutils literal notranslate"><span class="pre">/card/others/patches</span></code> (<code class="docutils literal notranslate"><span class="pre">card</span></code> is your memory card) on startup. Otherwise, if you’ve added more patches while the phone is still on, you can re-run JJPatcher from the Applications folder</p></li>
+</ol>
+</section>
 </section>
 
 
@@ -361,20 +386,20 @@ Wait a few seconds and this screen should appear, it lists all elements of the p
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="index.html"
+       href="a2_upto_cid53.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Patching</p>
+        <p class="prev-next-title">CID &lt;= 53</p>
       </div>
     </a>
     <a class="right-next"
-       href="a2_cid_higher_53.html"
+       href="../../elfpack.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">CID &gt; 53… JJPatcher</p>
+        <p class="prev-next-title">Elfpacks</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -384,6 +409,22 @@ Wait a few seconds and this screen should appear, it lists all elements of the p
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#prerequisites">Prerequisites</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#installation">Installation</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>
