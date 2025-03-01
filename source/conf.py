@@ -25,6 +25,9 @@ html_theme_options = {
   "collapse_navbar": True,
 }
 
+html_logo = "_static/operationse_logo.png"
+html_favicon = "_static/operationse_favicon.ico"
+
 # -- Options for HTML output -------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
 html_static_path = ['_static']

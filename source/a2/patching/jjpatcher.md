@@ -1,6 +1,7 @@
-# CID > 53... JJPatcher
+# JJPatcher
 
-When your CID is higher than 53 you'll need to use what's called JJPatcher, it's a Java-based patcher that leverages an exploit to patch the phone at runtime. It is a bit tedious to set up but works great once installed.
+JJPatcher is Java-based patcher that leverages an exploit to patch the phone at runtime. It is a bit tedious to set up but works great once installed.
+It is also the only way to patch devices that have a CID greater than 53
 
 ## Prerequisites
 First and foremost, you need **bpatch**, you can find the Git repo for it here: [farid1991/bpatch](https://github.com/farid1991/bpatch), either clone the repository or download it as a ZIP directly from GitHub.
