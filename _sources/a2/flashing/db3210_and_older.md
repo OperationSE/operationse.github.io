@@ -1,4 +1,4 @@
-# DB3210 and older (a2uploader)
+# DB3210 and older, CID <= 53 (a2uploader)
 This tool is pretty straightforward, here's how you use it :
 
 ![A2Uploader Steps](/_static/a2flasher_1.png)
